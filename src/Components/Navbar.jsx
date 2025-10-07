@@ -1,6 +1,6 @@
 import React from 'react';
 
-const NavBar = () => {
+const Navbar = () => {
     return (
         <div>
             <h2>it's is navbar </h2>
@@ -8,4 +8,4 @@ const NavBar = () => {
     );
 };
 
-export default NavBar;
+export default Navbar;
