@@ -8,19 +8,38 @@ import { MdReviews } from 'react-icons/md';
 import { useState } from 'react';
 import { toast } from 'react-toastify';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
-
-
+import apps404image from '../assets/apps404.png'
 
 const AppsDetails = () => {
     const { id } = useParams();
 
-    const { apps, loading } = useApps();
+    const { apps, loading, error } = useApps();
 
     const [isInstalled, setIsInstalled] = useState(false);
 
+
+
+    if (loading) return <p className="text-center text-lg font-bold my-20">Loading App Details...</p>;
+
+    if (error) return <p className="text-center text-red-500 font-bold my-20">⚠️ Failed to load apps data.</p>;
+
+
     const app = apps.find(a => String(a.id) === id)
 
-    if (loading) return <p>Loading......Apps Detaisl</p>
+    if (!app) {
+        return (
+            <div className=''>
+                <div className='flex  justify-center items-center'>
+                    <img src={apps404image} alt="" />
+                </div>
+                <div className='text-center my-10'>
+                    <h1 className='text-4xl font-bold mb-5'>App not Found</h1>
+                    <p className="text-gray-500">The app you’re looking for doesn’t exist or has been removed.</p>
+                </div>
+            </div>
+        )
+    }
+
 
     const { title, image, companyName, description, ratingAvg, downloads, reviews, size, ratings } = app || {}
 
@@ -36,7 +55,7 @@ const AppsDetails = () => {
             <div className='xl:lg:md:flex  gap-10 my-20 border-b  border-gray-500 lg:xl:md:w-full pb-10'>
                 <div>
                     <figure>
-                        <img className=' shadow-2xl mb-3' src={image} alt="" />
+                        <img className=' shadow-2xl mb-3 rounded-3xl' src={image} alt="" />
                     </figure>
                 </div>
                 <div className=''>

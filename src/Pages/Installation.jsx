@@ -40,15 +40,6 @@ const Installation = () => {
     }
 
 
-    // const totalApps = {}
-    //     installApp.forEach(app => {
-    //         const category = app.category
-
-
-    //         totalApps[category] = (totalApps[category] || 0 + app.size)
-    //     })
-
-
 
     return (
         <div className=''>
