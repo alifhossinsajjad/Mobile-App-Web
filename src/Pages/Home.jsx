@@ -3,11 +3,13 @@ import img1 from '../assets/Primary Button_1.png'
 import img2 from '../assets/Primary Button_2.png'
 import banner from '../assets/hero.png'
 import useApps from '../Hooks/useApps';
-
+import AppCard from '../Components/AppCard';
 const Home = () => {
 
-    const {apps} = useApps();
-    console.log(apps);
+    const { apps } = useApps();
+
+    const featureApps = apps.slice(0, 8)
+    console.log(featureApps);
 
 
     return (
@@ -63,8 +65,12 @@ const Home = () => {
                     <h1 className='text-4xl font-bold mb-6'>Trending Apps</h1>
                     <p className='text-gray-500'>Explore All Trending Apps on the Market developed by us</p>
                 </div>
-                <div>
-                    
+                <div className='w-10/12 mx-auto'>
+                    <div className='grid xl:lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-20'>
+                        {
+                            featureApps.map(app => <AppCard key={app.id} app={app} />)
+                        }
+                    </div>
                 </div>
             </div>
         </div>
