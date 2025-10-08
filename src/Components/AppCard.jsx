@@ -11,7 +11,7 @@ const AppCard = ({ app }) => {
     return (
        <Link to={`/apps/${id}`}> <div className="card bg-base-100 w-96 shadow-sm">
             <figure>
-                <img className='h-80 w-full'
+                <img className='h-70 w-full'
                     src={image} />
             </figure>
             <div className="card-body">
