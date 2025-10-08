@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { loadInstall, removeFromInstallation } from '../utils/LocalStorage';
 import { FaStar } from 'react-icons/fa';
 import { GrDownload } from 'react-icons/gr';
+import { toast } from 'react-toastify';
 
 
 const Installation = () => {
@@ -33,6 +34,7 @@ const Installation = () => {
 
         removeFromInstallation(id)
         setInstallApp(prev => prev.filter(a => a.id !== id))
+        toast.success('✅ App Uninstalled Successfully!');
         
 
     }

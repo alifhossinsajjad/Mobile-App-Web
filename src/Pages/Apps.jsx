@@ -1,27 +1,36 @@
 import React, { useEffect, useState } from 'react';
 import useApps from '../Hooks/useApps';
 import AppCard from '../Components/AppCard';
-import { NavLink } from 'react-router';
+import { Link, NavLink } from 'react-router';
 
 const Apps = () => {
 
   const { apps } = useApps()
-  console.log(apps);
+
 
   const [search, setSearch] = useState('')
 
   const [searchedApps, setSearchedApps] = useState([])
 
+  const [loading, setLoading] = useState(true)
+
   useEffect(() => {
-    const term = search.trim().toLowerCase()
-    const searched = term ? apps?.filter(a => a?.title?.toLowerCase().includes(term)) : apps
-    setSearchedApps(searched)
+    setLoading(true);
+    const timer = setTimeout(() => {
+      const term = search.trim().toLowerCase()
+      const searched = term ? apps?.filter(a => a?.title?.toLowerCase().includes(term)) : apps;
+
+      setSearchedApps(searched);
+      setLoading(false)
+    }, 600);
+
+    return () => clearTimeout(timer)
   }, [search, apps])
 
 
 
   return (
-    <div className='w-11/12 mx-auto p-10 my-10'>
+    <div className=' max-w-10/12 mx-auto my-20'>
       <div className='text-center'>
         <h1 className='text-5xl font-bold mb-5'>Our All Applications</h1>
         <p className='text-gray-500'>Explore All Apps on the Market developed by us. We code for Millions</p>
@@ -35,22 +44,33 @@ const Apps = () => {
             value={search}
             type="Search" placeholder="Search" />
         </label>
-
       </div>
-      {searchedApps && searchedApps?.length > 0 ? (
-        <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10">
-          {searchedApps.map(app => (
-            <AppCard key={app.id} app={app} />
-          ))}
+
+      {loading ? (
+        <div className="flex justify-center items-center py-20">
+          <div className="w-12 h-12 border-4 border-dashed rounded-full animate-spin border-[#9F62F2]"></div>
         </div>
-      ) : (
-        <div className="text-center text-gray-500 py-20">
-          <h2 className="text-4xl font-bold text-gray-700 mb-2">No Apps Found </h2>
-          <div className='flex justify-center '>
-            <NavLink to={'/'} className='bg-gradient-to-tl from-[#9F62F2] to-[#632EE3] flex justify-center items-center text-lg font-bold text-white my-16 p-4 rounded-lg'>Show All</NavLink>
+      ) :
+        searchedApps && searchedApps?.length > 0 ? (
+          <div>
+            <div className="grid xl:lg:grid-cols-4  md:grid-cols-2 grid-cols-1 gap-20">
+              {searchedApps.map(app => (
+                <AppCard key={app.id} app={app} />
+              ))}
+            </div>
+            <div className='text-center my-10'>
+              <Link to={'/apps'} className='bg-gradient-to-tl from-[#9F62F2] to-[#632EE3] text-lg font-bold text-white my-6 p-4 rounded-lg'>Show All</Link>
+            </div>
           </div>
-        </div>
-      )}
+
+        ) : (
+          <div className="text-center text-gray-500 py-20">
+            <h2 className="text-4xl font-bold text-gray-700 mb-2">No Apps Found </h2>
+            <div className='text-center my-10'>
+              <Link to={'/'} className='bg-gradient-to-tl from-[#9F62F2] to-[#632EE3] text-lg font-bold text-white my-6 p-4 rounded-lg'>Show All</Link>
+            </div>
+          </div>
+        )}
     </div>
   );
 };

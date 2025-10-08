@@ -33,22 +33,26 @@ const AppsDetails = () => {
     }
     return (
         <div className='w-10/12 mx-auto'>
-            <div className='flex gap-10 my-20 border-b  border-gray-500 w-full pb-10'>
+            <div className='xl:lg:md:flex  gap-10 my-20 border-b  border-gray-500 lg:xl:md:w-full pb-10'>
                 <div>
                     <figure>
-                        <img className=' shadow-2xl' src={image} alt="" />
+                        <img className=' shadow-2xl mb-3' src={image} alt="" />
                     </figure>
                 </div>
                 <div className=''>
-                    <div className='border-b pb-5  border-gray-500 w-7xl'>
+                    <div className='border-b pb-5  border-gray-500 lg:xl:md:w-7xl'>
                         <h1 className='text-lg font-bold'>Name : {title}</h1>
                         <p className='text-lg font-bold'>Developed by : <span className='text-[#9F62F2]'>{companyName}</span></p>
                     </div>
                     <div>
-                        <div className='flex gap-10 py-7 '>
-                            <span className='text-xl font-bold'><span className='text-green-500 text-5xl font-bold'><TbDownload /></span><p className='text-gray-500'>Downloads</p>{downloads}</span>
-                            <span className='text-xl font-bold'><span className='text-[#FF8811] text-5xl font-bold'><FaStar /></span><p className='text-gray-500'>Average Rating</p>{ratingAvg}</span>
-                            <span className='text-xl font-bold'><span className=' text-[#9F62F2]  text-5xl font-bold  '><MdReviews /></span><p className='text-gray-500'>Total Reviews</p>{reviews}</span>
+                        <div className='lg:xl:md:flex gap-10 py-7 '>
+                            <span className='lg:xl:md:text-xl font-bold'><span className='text-green-500 lg:xl:md:text-5xl  font-bold'><TbDownload /></span><p className='text-gray-500'>Downloads</p>{downloads}</span>
+
+
+                            <span className='lg:xl:md:text-xl font-bold'><span className='text-[#FF8811] lg:xl:md:text-5xl font-bold'><FaStar /></span><p className='text-gray-500'>Average Rating</p>{ratingAvg}</span>
+
+
+                            <span className='lg:xl:md:text-xl font-bold'><span className=' text-[#9F62F2]  lg:xl:md:text-5xl font-bold  '><MdReviews /></span><p className='text-gray-500'>Total Reviews</p>{reviews}</span>
                         </div>
                         <button onClick={handleInstalled} className={`hover:cursor-pointer mb-6 text-xl font-bold p-4 rounded-lg transition-colors duration-300 ${isInstalled
                             ? 'bg-gray-400 text-white'
