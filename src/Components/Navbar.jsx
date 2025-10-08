@@ -1,5 +1,13 @@
 import React from 'react';
 
+
+import logo from '../assets/logo.png'
+import { Link, NavLink } from 'react-router';
+import { AiOutlineGithub } from 'react-icons/ai';
+import { BsGithub } from 'react-icons/bs';
+
+
+
 const Navbar = () => {
     return (
         <div className="navbar bg-base-100 shadow-sm ">
@@ -16,17 +24,29 @@ const Navbar = () => {
                         <li><a>Item 3</a></li>
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-xl">daisyUI</a>
+                <Link to={'/'} className="flex gap-2 btn-ghost text-xl font-bold bg-linear-to-tl from-[#9F62F2] to-[#632EE3] text-transparent bg-clip-text"><img className='w-8' src={logo} alt="" />HERO.IO</Link>
             </div>
             <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal px-1">
-                    <li><a>Item 1</a></li>
-                    <li><a>Item 2</a></li>
-                    <li><a>Item 3</a></li>
+                <ul className="gap-10 menu-horizontal px-1">
+                    <li><NavLink to={'/'} className={({ isActive }) =>
+                        isActive
+                            ? "text-lg font-bold underline bg-gradient-to-tl from-[#9F62F2] to-[#632EE3] text-transparent bg-clip-text gradient-underline"
+                            : "text-lg font-bold "
+                    }>Home</NavLink></li>
+                    <li><NavLink to={'/apps'} className={({ isActive }) =>
+                        isActive
+                            ? "text-lg font-bold underline bg-gradient-to-tl from-[#9F62F2] to-[#632EE3] text-transparent bg-clip-text gradient-underline"
+                            : "text-lg font-bold "
+                    }>Apps</NavLink></li>
+                    <li><NavLink to={'/installation'} className={({ isActive }) =>
+                        isActive
+                            ? "text-lg font-bold underline bg-gradient-to-tl from-[#9F62F2] to-[#632EE3] text-transparent bg-clip-text gradient-underline"
+                            : "text-lg font-bold "
+                    }>Installation</NavLink></li>
                 </ul>
             </div>
             <div className="navbar-end lg:md:mr-20">
-                <a className="btn">Button</a>
+                <Link to={'https://github.com/alifhossinsajjad'} className="btn text-xl font-bold p-6 bg-linear-to-tl from-[#9F62F2] to-[#632EE3] text-white "><BsGithub />Contrubute</Link>
             </div>
         </div>
     );

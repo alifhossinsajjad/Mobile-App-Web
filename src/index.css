@@ -1,2 +1,17 @@
 @import "tailwindcss";
 @plugin "daisyui";
+
+.gradient-underline {
+  position: relative;
+}
+
+.gradient-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px; /* Adjust underline position */
+  width: 100%;
+  height: 3px; /* underline thickness */
+  background: linear-gradient(to top left, #9F62F2, #632EE3);
+  border-radius: 2px;
+}
