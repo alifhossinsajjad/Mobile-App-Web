@@ -186,7 +186,7 @@
     "id": 11,
     "description": "Music streaming app with millions of songs and podcasts.",
     "size": "35MB",
-    "reviews": 2000000,
+    "reviews": "20K",
     "ratingAvg": 4.7,
     "downloads": "50M",
     "ratings": [
@@ -204,7 +204,7 @@
     "id": 12,
     "description": "Share photos and videos, follow friends, and explore content.",
     "size": "40MB",
-    "reviews": 3500000,
+    "reviews": "35K",
     "ratingAvg": 4.6,
     "downloads": "70M",
     "ratings": [
@@ -222,7 +222,7 @@
     "id": 13,
     "description": "Create and share short videos, explore trending content globally.",
     "size": "42MB",
-    "reviews": 4000000,
+    "reviews": "40K",
     "ratingAvg": 4.5,
     "downloads": "80M",
     "ratings": [
@@ -240,7 +240,7 @@
     "id": 14,
     "description": "Simple, reliable messaging and calling app for everyone.",
     "size": "30MB",
-    "reviews": 3200000,
+    "reviews": "32K",
     "ratingAvg": 4.7,
     "downloads": "90M",
     "ratings": [
@@ -258,7 +258,7 @@
     "id": 15,
     "description": "Watch, upload, and share videos with the world.",
     "size": "50MB",
-    "reviews": 5000000,
+    "reviews": "50K",
     "ratingAvg": 4.8,
     "downloads": "100M",
     "ratings": [
@@ -276,7 +276,7 @@
     "id": 16,
     "description": "Instant messaging app with voice, video, and group chats.",
     "size": "28MB",
-    "reviews": 2800000,
+    "reviews": "28K",
     "ratingAvg": 4.6,
     "downloads": "65M",
     "ratings": [
@@ -294,7 +294,7 @@
     "id": 17,
     "description": "Send ephemeral messages, photos and videos to friends.",
     "size": "38MB",
-    "reviews": 1800000,
+    "reviews": "18K",
     "ratingAvg": 4.4,
     "downloads": "45M",
     "ratings": [
@@ -312,7 +312,7 @@
     "id": 18,
     "description": "Stream movies, TV shows, and original content anytime, anywhere.",
     "size": "45MB",
-    "reviews": 2200000,
+    "reviews": "22K",
     "ratingAvg": 4.7,
     "downloads": "60M",
     "ratings": [
@@ -330,7 +330,7 @@
     "id": 19,
     "description": "Navigate and explore with real-time GPS and local guides.",
     "size": "60MB",
-    "reviews": 3000000,
+    "reviews": "30K",
     "ratingAvg": 4.8,
     "downloads": "85M",
     "ratings": [
@@ -348,7 +348,7 @@
     "id": 20,
     "description": "Shop millions of products with fast delivery and secure payments.",
     "size": "55MB",
-    "reviews": 2500000,
+    "reviews": "25K",
     "ratingAvg": 4.6,
     "downloads": "75M",
     "ratings": [

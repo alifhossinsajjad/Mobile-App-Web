@@ -45,7 +45,7 @@ const Apps = () => {
         </div>
       ) : (
         <div className="text-center text-gray-500 py-20">
-          <h2 className="text-2xl font-semibold text-gray-700 mb-3">No Apps Found </h2>
+          <h2 className="text-4xl font-bold text-gray-700 mb-2">No Apps Found </h2>
           <div className='flex justify-center '>
             <NavLink to={'/'} className='bg-gradient-to-tl from-[#9F62F2] to-[#632EE3] flex justify-center items-center text-lg font-bold text-white my-16 p-4 rounded-lg'>Show All</NavLink>
           </div>

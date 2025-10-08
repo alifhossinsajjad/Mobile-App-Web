@@ -2,15 +2,16 @@ import React from 'react';
 import { BsFillStarFill } from 'react-icons/bs';
 import { FaStar } from 'react-icons/fa';
 import { MdOutlineFileDownload } from 'react-icons/md';
+import { Link } from 'react-router';
 
 const AppCard = ({ app }) => {
 
-    const {title, image, ratingAvg,downloads} = app
+    const {title, image, ratingAvg,downloads,id} = app
 
     return (
-        <div className="card bg-base-100 w-96 shadow-sm">
+       <Link to={`/apps/${id}`}> <div className="card bg-base-100 w-96 shadow-sm">
             <figure>
-                <img
+                <img className='h-80 w-full'
                     src={image} />
             </figure>
             <div className="card-body">
@@ -22,7 +23,7 @@ const AppCard = ({ app }) => {
                     <span className='flex items-center text-lg font-bold text-[#FF8811]  gap-2'><BsFillStarFill size={25}/>{ratingAvg}</span>
                 </div>
             </div>
-        </div>
+        </div></Link>
     );
 };
 
