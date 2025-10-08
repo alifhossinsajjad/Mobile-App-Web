@@ -24,8 +24,9 @@ const Home = () => {
 
                     </div>
                     <div className='flex justify-center items-center lg:md:xl:gap-10 gap-5'>
-                        <img src={img1} alt="" />
-                        <img src={img2} alt="" />
+                        
+                        <NavLink to={'https://www.apple.com/app-store/'}><img  src={img1} alt=""/></NavLink>
+                        <NavLink to={'https://play.google.com/store/apps?hl=en'}><img src={img2} alt="" /></NavLink>
                     </div>
                 </div>
 

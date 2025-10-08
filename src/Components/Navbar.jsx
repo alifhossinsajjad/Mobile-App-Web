@@ -19,9 +19,9 @@ const Navbar = () => {
                     <ul
                         tabIndex={0}
                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                        <li><a>Item 1</a></li>
-                        <li><a>Item 2</a></li>
-                        <li><a>Item 3</a></li>
+                        <li><NavLink to={'/'}>Home</NavLink></li>
+                        <li><NavLink to={'/apps'}>Apps</NavLink></li>
+                        <li><NavLink to={'/installation'}>Installation</NavLink></li>
                     </ul>
                 </div>
                 <Link to={'/'} className="flex gap-2 btn-ghost text-xl font-bold bg-linear-to-tl from-[#9F62F2] to-[#632EE3] text-transparent bg-clip-text"><img className='w-8' src={logo} alt="" />HERO.IO</Link>
