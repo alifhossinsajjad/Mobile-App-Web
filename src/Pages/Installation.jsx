@@ -3,13 +3,14 @@ import { loadInstall, removeFromInstallation } from '../utils/LocalStorage';
 import { FaStar } from 'react-icons/fa';
 import { GrDownload } from 'react-icons/gr';
 
+
 const Installation = () => {
 
     const [installApp, setInstallApp] = useState(loadInstall);
     const [sortOrder, setSortOrder] = useState('')
 
 
-    if (!installApp.length) return <p className='text-center mt-20 text-2xl font-bold'>
+    if (!installApp.length) return <p className='text-center mt-20  text-2xl font-bold'>
         No Apps Available
     </p>
 
@@ -32,23 +33,24 @@ const Installation = () => {
 
         removeFromInstallation(id)
         setInstallApp(prev => prev.filter(a => a.id !== id))
+        
 
     }
 
 
-    const totalApps = {}
-        installApp.forEach(app => {
-            const category = app.category
+    // const totalApps = {}
+    //     installApp.forEach(app => {
+    //         const category = app.category
 
 
-            totalApps[category] = (totalApps[category] || 0 + app.size)
-        })
+    //         totalApps[category] = (totalApps[category] || 0 + app.size)
+    //     })
 
 
 
     return (
         <div className=''>
-            <div className=' p-10 m-30 '>
+            <div className='p-10 m-30 '>
                 <div >
                     <div className='text-center'>
                         <h1 className='text-4xl font-bold mb-4'>Your Installed Apps</h1>
@@ -96,6 +98,7 @@ const Installation = () => {
                                     >
                                         Uninstall
                                     </button>
+                                 
                                 </div>
                             </div>
                         ))

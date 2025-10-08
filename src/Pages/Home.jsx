@@ -5,9 +5,10 @@ import banner from '../assets/hero.png'
 import useApps from '../Hooks/useApps';
 import AppCard from '../Components/AppCard';
 import { Link, NavLink } from 'react-router';
+import Loading from '../Components/Loading';
 const Home = () => {
 
-    const { apps } = useApps();
+    const { apps, loading } = useApps();
 
     const featureApps = apps.slice(0, 8)
     console.log(featureApps);
@@ -68,11 +69,14 @@ const Home = () => {
                     <p className='text-gray-500'>Explore All Trending Apps on the Market developed by us</p>
                 </div>
                 <div className='w-10/12 mx-auto'>
-                    <div className='grid xl:lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-20'>
+                    {
+                        loading ? <Loading/> :
+                        <div className='grid xl:lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-20'>
                         {
                             featureApps.map(app => <AppCard key={app.id} app={app} />)
                         }
                     </div>
+                    }
 
                     <div className='flex justify-center '>
                         <NavLink to={'/apps'} className='bg-gradient-to-tl from-[#9F62F2] to-[#632EE3] flex justify-center items-center text-lg font-bold text-white my-16 p-4 rounded-lg'>Show All</NavLink>
