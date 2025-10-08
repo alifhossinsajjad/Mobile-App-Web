@@ -1,4 +1,7 @@
 import React from 'react';
+import { BsFillStarFill } from 'react-icons/bs';
+import { FaStar } from 'react-icons/fa';
+import { MdOutlineFileDownload } from 'react-icons/md';
 
 const AppCard = ({ app }) => {
 
@@ -15,8 +18,8 @@ const AppCard = ({ app }) => {
                     Name: {title}
                 </h2>
                 <div className="card-actions justify-between items-center">
-                    <span>{downloads}</span>
-                    <span>{ratingAvg}</span>
+                    <span className='flex items-center text-lg font-bold text-green-500 gap-2'><MdOutlineFileDownload size={25}/>{downloads}</span>
+                    <span className='flex items-center text-lg font-bold text-[#FF8811]  gap-2'><BsFillStarFill size={25}/>{ratingAvg}</span>
                 </div>
             </div>
         </div>

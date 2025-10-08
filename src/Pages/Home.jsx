@@ -4,6 +4,7 @@ import img2 from '../assets/Primary Button_2.png'
 import banner from '../assets/hero.png'
 import useApps from '../Hooks/useApps';
 import AppCard from '../Components/AppCard';
+import { Link, NavLink } from 'react-router';
 const Home = () => {
 
     const { apps } = useApps();
@@ -70,6 +71,10 @@ const Home = () => {
                         {
                             featureApps.map(app => <AppCard key={app.id} app={app} />)
                         }
+                    </div>
+
+                    <div className='flex justify-center '>
+                        <NavLink to={'/apps'} className='bg-gradient-to-tl from-[#9F62F2] to-[#632EE3] flex justify-center items-center text-lg font-bold text-white my-16 p-4 rounded-lg'>Show All</NavLink>
                     </div>
                 </div>
             </div>
