@@ -1,11 +1,22 @@
 import React from 'react';
+import { Link, useRouteError } from 'react-router';
 
 const ErrorPage = () => {
+
+    const error = useRouteError();
+
     return (
-        <div>
-            <h2>this is error page</h2>
+        <div className="flex flex-col justify-center items-center h-screen text-center bg-gray-50">
+            <h1 className='xl:lg:md:text-8xl text-lg font-extrabold'>404</h1>
+            <h2 className='text-3xl font-bold text-gray-700 mt-2'>Page Not Found</h2>
+            <p>
+                {
+                    error?.statusText || "The Page you are looking dose not exist"
+                }
+            </p>
+            <Link to={'/'} className="mt-6 bg-[#9F62F2] text-white px-6 py-3 rounded-lg hover:shadow-lg">Go Back Home</Link>
         </div>
     );
 };
 
-export default ErrorPage;<h2>this is error page</h2>
+export default ErrorPage;

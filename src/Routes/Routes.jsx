@@ -11,7 +11,7 @@ const router = createBrowserRouter([
     {
         path:'/',
         Component: RootLayout,
-        errorElement : ErrorPage,
+        errorElement : <ErrorPage/>,
         hydrateFallbackElement :<p>Loading Apps</p>,
         children : [
             {
@@ -30,6 +30,10 @@ const router = createBrowserRouter([
             {
                 path:'/apps/:id',
                 Component: AppsDetails,
+            },
+            {
+                path:'*',
+                Component: <ErrorPage/>
             }
         ]
     }
