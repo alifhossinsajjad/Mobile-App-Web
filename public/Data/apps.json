@@ -1,0 +1,452 @@
+[
+  {
+    "image": "https://images.unsplash.com/photo-1545239351-1141bd82e8a6?w=600&q=80",
+    "title": "NoteFlow",
+    "companyName": "Scribe Labs",
+    "id": 1,
+    "description": "A beautiful note-taking app with cloud sync and markdown support.",
+    "size": 22,
+    "reviews": 1200,
+    "ratingAvg": 4.5,
+    "downloads": 150000,
+    "ratings": [
+      { "name": "1 star", "count": 50 },
+      { "name": "2 star", "count": 30 },
+      { "name": "3 star", "count": 120 },
+      { "name": "4 star", "count": 300 },
+      { "name": "5 star", "count": 700 }
+    ]
+  },
+  {
+    "image": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=600&q=80",
+    "title": "FitTrack",
+    "companyName": "Healthify",
+    "id": 2,
+    "description": "Track your workouts and nutrition. Friendly UI and smart goals.",
+    "size": 34,
+    "reviews": 980,
+    "ratingAvg": 4.2,
+    "downloads": 120000,
+    "ratings": [
+      { "name": "1 star", "count": 40 },
+      { "name": "2 star", "count": 35 },
+      { "name": "3 star", "count": 200 },
+      { "name": "4 star", "count": 300 },
+      { "name": "5 star", "count": 405 }
+    ]
+  },
+  {
+    "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&q=80",
+    "title": "PocketChef",
+    "companyName": "KitchenWorks",
+    "id": 3,
+    "description": "Quick recipes, grocery lists and step-by-step cooking guides.",
+    "size": 28,
+    "reviews": 600,
+    "ratingAvg": 4.6,
+    "downloads": 90000,
+    "ratings": [
+      { "name": "1 star", "count": 20 },
+      { "name": "2 star", "count": 10 },
+      { "name": "3 star", "count": 70 },
+      { "name": "4 star", "count": 200 },
+      { "name": "5 star", "count": 300 }
+    ]
+  },
+  {
+    "image": "https://images.unsplash.com/photo-1509395176047-4a66953fd231?w=600&q=80",
+    "title": "SkyNews",
+    "companyName": "MediaFlow",
+    "id": 4,
+    "description": "Personalized news feed with offline reading and podcast integration.",
+    "size": 40,
+    "reviews": 400,
+    "ratingAvg": 4.0,
+    "downloads": 45000,
+    "ratings": [
+      { "name": "1 star", "count": 30 },
+      { "name": "2 star", "count": 25 },
+      { "name": "3 star", "count": 100 },
+      { "name": "4 star", "count": 145 },
+      { "name": "5 star", "count": 100 }
+    ]
+  },
+  {
+    "image": "https://images.unsplash.com/photo-1506765515384-028b60a970df?w=600&q=80",
+    "title": "BudgetBuddy",
+    "companyName": "FinanceGen",
+    "id": 5,
+    "description": "Smart budgeting app that syncs with banks and auto-categorizes expenses.",
+    "size": 18,
+    "reviews": 720,
+    "ratingAvg": 4.4,
+    "downloads": 80000,
+    "ratings": [
+      { "name": "1 star", "count": 25 },
+      { "name": "2 star", "count": 20 },
+      { "name": "3 star", "count": 150 },
+      { "name": "4 star", "count": 200 },
+      { "name": "5 star", "count": 325 }
+    ]
+  },
+  {
+    "image": "https://images.unsplash.com/photo-1545239351-1141bd82e8a6?w=600&q=80",
+    "title": "FlashCard Pro",
+    "companyName": "StudyWorks",
+    "id": 6,
+    "description": "Create and share flashcards, spaced repetition engine built-in.",
+    "size": 12,
+    "reviews": 300,
+    "ratingAvg": 4.7,
+    "downloads": 50000,
+    "ratings": [
+      { "name": "1 star", "count": 5 },
+      { "name": "2 star", "count": 5 },
+      { "name": "3 star", "count": 20 },
+      { "name": "4 star", "count": 60 },
+      { "name": "5 star", "count": 210 }
+    ]
+  },
+  {
+    "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&q=80",
+    "title": "TransitGo",
+    "companyName": "UrbanMove",
+    "id": 7,
+    "description": "Realtime public transport predictions and route planning.",
+    "size": 16,
+    "reviews": 450,
+    "ratingAvg": 4.1,
+    "downloads": 67000,
+    "ratings": [
+      { "name": "1 star", "count": 30 },
+      { "name": "2 star", "count": 20 },
+      { "name": "3 star", "count": 150 },
+      { "name": "4 star", "count": 150 },
+      { "name": "5 star", "count": 100 }
+    ]
+  },
+  {
+    "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&q=80",
+    "title": "PhotoWave",
+    "companyName": "LensLab",
+    "id": 8,
+    "description": "Pro photo editor with filters, layers and export presets.",
+    "size": 55,
+    "reviews": 1500,
+    "ratingAvg": 4.8,
+    "downloads": 220000,
+    "ratings": [
+      { "name": "1 star", "count": 20 },
+      { "name": "2 star", "count": 10 },
+      { "name": "3 star", "count": 50 },
+      { "name": "4 star", "count": 300 },
+      { "name": "5 star", "count": 1120 }
+    ]
+  },
+  {
+    "image": "https://images.unsplash.com/photo-1518779578993-ec3579fee39f?w=600&q=80",
+    "title": "ChatSphere",
+    "companyName": "Commune",
+    "id": 9,
+    "description": "Lightweight messenger with local encryption and self-destruct messages.",
+    "size": 25,
+    "reviews": 220,
+    "ratingAvg": 3.9,
+    "downloads": 34000,
+    "ratings": [
+      { "name": "1 star", "count": 60 },
+      { "name": "2 star", "count": 40 },
+      { "name": "3 star", "count": 50 },
+      { "name": "4 star", "count": 40 },
+      { "name": "5 star", "count": 30 }
+    ]
+  },
+  {
+    "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&q=80",
+    "title": "LanguageX",
+    "companyName": "LinguaTech",
+    "id": 10,
+    "description": "Learn languages with micro-lessons, voice practice and games.",
+    "size": 30,
+    "reviews": 950,
+    "ratingAvg": 4.3,
+    "downloads": 95000,
+    "ratings": [
+      { "name": "1 star", "count": 60 },
+      { "name": "2 star", "count": 30 },
+      { "name": "3 star", "count": 120 },
+      { "name": "4 star", "count": 300 },
+      { "name": "5 star", "count": 440 }
+    ]
+  },
+  {
+    "image": "https://images.unsplash.com/photo-1509395176047-4a66953fd231?w=600&q=80",
+    "title": "CalmMind",
+    "companyName": "ZenCorp",
+    "id": 11,
+    "description": "Meditation app with guided sessions and sleeping stories.",
+    "size": 20,
+    "reviews": 1100,
+    "ratingAvg": 4.6,
+    "downloads": 140000,
+    "ratings": [
+      { "name": "1 star", "count": 10 },
+      { "name": "2 star", "count": 20 },
+      { "name": "3 star", "count": 100 },
+      { "name": "4 star", "count": 400 },
+      { "name": "5 star", "count": 570 }
+    ]
+  },
+  {
+    "image": "https://images.unsplash.com/photo-1506765515384-028b60a970df?w=600&q=80",
+    "title": "Taskly",
+    "companyName": "Flow Systems",
+    "id": 12,
+    "description": "A minimal to-do app with priority boards and daily focus mode.",
+    "size": 10,
+    "reviews": 210,
+    "ratingAvg": 4.0,
+    "downloads": 39000,
+    "ratings": [
+      { "name": "1 star", "count": 15 },
+      { "name": "2 star", "count": 10 },
+      { "name": "3 star", "count": 40 },
+      { "name": "4 star", "count": 60 },
+      { "name": "5 star", "count": 85 }
+    ]
+  },
+  {
+    "image": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=600&q=80",
+    "title": "MindMapr",
+    "companyName": "ThinkTools",
+    "id": 13,
+    "description": "Idea mapping app for brainstorming and team collaboration.",
+    "size": 26,
+    "reviews": 320,
+    "ratingAvg": 4.3,
+    "downloads": 43000,
+    "ratings": [
+      { "name": "1 star", "count": 5 },
+      { "name": "2 star", "count": 10 },
+      { "name": "3 star", "count": 70 },
+      { "name": "4 star", "count": 120 },
+      { "name": "5 star", "count": 115 }
+    ]
+  },
+  {
+    "image": "https://images.unsplash.com/photo-1520975919917-8f1d1bce18f2?w=600&q=80",
+    "title": "PDF Wizard",
+    "companyName": "Doc Masters",
+    "id": 14,
+    "description": "Edit, sign and compress PDFs easily on mobile and desktop.",
+    "size": 45,
+    "reviews": 810,
+    "ratingAvg": 4.4,
+    "downloads": 98000,
+    "ratings": [
+      { "name": "1 star", "count": 15 },
+      { "name": "2 star", "count": 10 },
+      { "name": "3 star", "count": 100 },
+      { "name": "4 star", "count": 250 },
+      { "name": "5 star", "count": 435 }
+    ]
+  },
+  {
+    "image": "https://images.unsplash.com/photo-1502767089025-6572583495b0?w=600&q=80",
+    "title": "HabitLoop",
+    "companyName": "DailyDev",
+    "id": 15,
+    "description": "Build routines and streaks with smart reminders and analytics.",
+    "size": 14,
+    "reviews": 410,
+    "ratingAvg": 4.2,
+    "downloads": 62000,
+    "ratings": [
+      { "name": "1 star", "count": 12 },
+      { "name": "2 star", "count": 10 },
+      { "name": "3 star", "count": 80 },
+      { "name": "4 star", "count": 180 },
+      { "name": "5 star", "count": 128 }
+    ]
+  },
+  {
+    "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&q=80",
+    "title": "StudyBuddy",
+    "companyName": "EduPlus",
+    "id": 16,
+    "description": "Group study rooms, timers and performance insights.",
+    "size": 19,
+    "reviews": 260,
+    "ratingAvg": 4.1,
+    "downloads": 47000,
+    "ratings": [
+      { "name": "1 star", "count": 8 },
+      { "name": "2 star", "count": 6 },
+      { "name": "3 star", "count": 60 },
+      { "name": "4 star", "count": 90 },
+      { "name": "5 star", "count": 96 }
+    ]
+  },
+  {
+    "image": "https://images.unsplash.com/photo-1497493292307-31c376b6e479?w=600&q=80",
+    "title": "Weatherly",
+    "companyName": "ClimateSoft",
+    "id": 17,
+    "description": "Accurate weather forecasts with radar maps and alerts.",
+    "size": 15,
+    "reviews": 540,
+    "ratingAvg": 4.5,
+    "downloads": 88000,
+    "ratings": [
+      { "name": "1 star", "count": 25 },
+      { "name": "2 star", "count": 15 },
+      { "name": "3 star", "count": 70 },
+      { "name": "4 star", "count": 180 },
+      { "name": "5 star", "count": 250 }
+    ]
+  },
+  {
+    "image": "https://images.unsplash.com/photo-1522204501961-34c52a51c8c8?w=600&q=80",
+    "title": "Musicify",
+    "companyName": "SoundWave Inc.",
+    "id": 18,
+    "description": "Stream and download your favorite tracks with offline playlists.",
+    "size": 50,
+    "reviews": 1300,
+    "ratingAvg": 4.7,
+    "downloads": 210000,
+    "ratings": [
+      { "name": "1 star", "count": 10 },
+      { "name": "2 star", "count": 20 },
+      { "name": "3 star", "count": 60 },
+      { "name": "4 star", "count": 400 },
+      { "name": "5 star", "count": 810 }
+    ]
+  },
+  {
+    "image": "https://images.unsplash.com/photo-1487014679447-9f8336841d58?w=600&q=80",
+    "title": "TravelMate",
+    "companyName": "TripGo",
+    "id": 19,
+    "description": "Plan trips, find hotels and explore hidden travel destinations.",
+    "size": 42,
+    "reviews": 900,
+    "ratingAvg": 4.3,
+    "downloads": 123000,
+    "ratings": [
+      { "name": "1 star", "count": 20 },
+      { "name": "2 star", "count": 25 },
+      { "name": "3 star", "count": 100 },
+      { "name": "4 star", "count": 280 },
+      { "name": "5 star", "count": 475 }
+    ]
+  },
+  {
+    "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=600&q=80",
+    "title": "CryptoHub",
+    "companyName": "FinX Labs",
+    "id": 20,
+    "description": "Monitor live crypto prices and manage your portfolio.",
+    "size": 31,
+    "reviews": 720,
+    "ratingAvg": 4.4,
+    "downloads": 96000,
+    "ratings": [
+      { "name": "1 star", "count": 18 },
+      { "name": "2 star", "count": 20 },
+      { "name": "3 star", "count": 90 },
+      { "name": "4 star", "count": 240 },
+      { "name": "5 star", "count": 352 }
+    ]
+  },
+  {
+    "image": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=600&q=80",
+    "title": "MovieBox",
+    "companyName": "StreamWorld",
+    "id": 21,
+    "description": "Watch the latest movies and shows with friends and family.",
+    "size": 60,
+    "reviews": 1800,
+    "ratingAvg": 4.6,
+    "downloads": 300000,
+    "ratings": [
+      { "name": "1 star", "count": 20 },
+      { "name": "2 star", "count": 30 },
+      { "name": "3 star", "count": 150 },
+      { "name": "4 star", "count": 500 },
+      { "name": "5 star", "count": 1100 }
+    ]
+  },
+  {
+    "image": "https://images.unsplash.com/photo-1502767089025-6572583495b0?w=600&q=80",
+    "title": "GoalTracker",
+    "companyName": "ProductiveMe",
+    "id": 22,
+    "description": "Visualize and track your goals using progress charts.",
+    "size": 17,
+    "reviews": 350,
+    "ratingAvg": 4.1,
+    "downloads": 56000,
+    "ratings": [
+      { "name": "1 star", "count": 12 },
+      { "name": "2 star", "count": 15 },
+      { "name": "3 star", "count": 70 },
+      { "name": "4 star", "count": 120 },
+      { "name": "5 star", "count": 133 }
+    ]
+  },
+  {
+    "image": "https://images.unsplash.com/photo-1518779578993-ec3579fee39f?w=600&q=80",
+    "title": "SecureVault",
+    "companyName": "SafeNet",
+    "id": 23,
+    "description": "Store passwords, files and notes securely with AES encryption.",
+    "size": 22,
+    "reviews": 650,
+    "ratingAvg": 4.5,
+    "downloads": 78000,
+    "ratings": [
+      { "name": "1 star", "count": 15 },
+      { "name": "2 star", "count": 15 },
+      { "name": "3 star", "count": 70 },
+      { "name": "4 star", "count": 220 },
+      { "name": "5 star", "count": 330 }
+    ]
+  },
+  {
+    "image": "https://images.unsplash.com/photo-1497493292307-31c376b6e479?w=600&q=80",
+    "title": "EduQuiz",
+    "companyName": "Learnify",
+    "id": 24,
+    "description": "Play quizzes on multiple subjects and compete globally.",
+    "size": 23,
+    "reviews": 540,
+    "ratingAvg": 4.2,
+    "downloads": 68000,
+    "ratings": [
+      { "name": "1 star", "count": 12 },
+      { "name": "2 star", "count": 18 },
+      { "name": "3 star", "count": 90 },
+      { "name": "4 star", "count": 190 },
+      { "name": "5 star", "count": 230 }
+    ]
+  },
+  {
+    "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&q=80",
+    "title": "PhotoVault",
+    "companyName": "SnapSafe",
+    "id": 25,
+    "description": "Private photo gallery with fingerprint lock and hidden folders.",
+    "size": 29,
+    "reviews": 470,
+    "ratingAvg": 4.4,
+    "downloads": 74000,
+    "ratings": [
+      { "name": "1 star", "count": 20 },
+      { "name": "2 star", "count": 20 },
+      { "name": "3 star", "count": 60 },
+      { "name": "4 star", "count": 170 },
+      { "name": "5 star", "count": 200 }
+    ]
+  }
+]
