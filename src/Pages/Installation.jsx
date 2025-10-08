@@ -43,10 +43,10 @@ const Installation = () => {
 
     return (
         <div className=''>
-            <div className='p-10 m-30 '>
+            <div className='xl:lg:md:p-10 xl:lg:md:m-30 p-5 m-5'>
                 <div >
                     <div className='text-center'>
-                        <h1 className='text-4xl font-bold mb-4'>Your Installed Apps</h1>
+                        <h1 className='xl:lg:md:text-4xl font-bold mb-4'>Your Installed Apps</h1>
                         <p className='text-gray-500 text-lg'>Explore All Trending Apps on the Market developed by us</p>
                     </div>
                     <div className='flex justify-between py-5 items-center'>
@@ -68,10 +68,10 @@ const Installation = () => {
                 <div className='space-y-8'>
                     {
                         sortedApp.map(a => (
-                            <div key={a.id} className='card card-side bg-base-100 shadow-lg p-3'>
+                            <div key={a.id} className='xl:lg:flex md:flex card-side bg-base-100 shadow-lg xl:lg:md:p-3'>
                                 <figure>
                                     <img
-                                        className='w-50 p-2 rounded-2xl object-cover'
+                                        className='xl:lg:w-80 md:w-50   p-2 rounded-2xl object-cover'
                                         src={a.image}
                                         alt={a.title}
                                     />

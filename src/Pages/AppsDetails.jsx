@@ -35,6 +35,8 @@ const AppsDetails = () => {
                 <div className='text-center my-10'>
                     <h1 className='text-4xl font-bold mb-5'>App not Found</h1>
                     <p className="text-gray-500">The app you’re looking for doesn’t exist or has been removed.</p>
+
+                    <LinK to={'/apps'} className="mt-6 bg-[#9F62F2] text-white px-6 py-3 rounded-lg hover:shadow-lg">Go Back Home</LinK>
                 </div>
             </div>
         )
@@ -55,23 +57,23 @@ const AppsDetails = () => {
             <div className='xl:lg:md:flex  gap-10 my-20 border-b  border-gray-500 lg:xl:md:w-full pb-10'>
                 <div>
                     <figure>
-                        <img className=' shadow-2xl mb-3 rounded-3xl' src={image} alt="" />
+                        <img className=' shadow-2xl xl:lg:w-full md:w-70 w-50  mb-3 rounded-3xl' src={image} alt="" />
                     </figure>
                 </div>
                 <div className=''>
                     <div className='border-b pb-5  border-gray-500 lg:xl:md:w-7xl'>
-                        <h1 className='text-lg font-bold'>Name : {title}</h1>
-                        <p className='text-lg font-bold'>Developed by : <span className='text-[#9F62F2]'>{companyName}</span></p>
+                        <h1 className='md:text-4xl xl:lg:text-5xl text-lg font-bold mb-3'>Name : {title}</h1>
+                        <p className='md:text-2xl xl:lg:text-4xl text-lg font-bold'>Developed by : <span className='text-[#9F62F2]'>{companyName}</span></p>
                     </div>
                     <div>
                         <div className='lg:xl:md:flex gap-10 py-7 '>
-                            <span className='lg:xl:md:text-xl font-bold'><span className='text-green-500 lg:xl:md:text-5xl  font-bold'><TbDownload /></span><p className='text-gray-500'>Downloads</p>{downloads}</span>
+                            <span className='md:text-2xl xl:lg:text-4xl text-xl font-bold '><span className='text-green-500 lg:xl:text-5xl md:text-4xl  font-bold'><TbDownload /></span><p className='text-gray-500 '>Downloads</p>{downloads}</span>
 
 
-                            <span className='lg:xl:md:text-xl font-bold'><span className='text-[#FF8811] lg:xl:md:text-5xl font-bold'><FaStar /></span><p className='text-gray-500'>Average Rating</p>{ratingAvg}</span>
+                            <span className='md:text-2xl xl:lg:text-4xl text-xl font-bold'><span className='text-[#FF8811] lg:xl:text-5xl md:text-4xl font-bold '><FaStar /></span><p className='text-gray-500'>Average Rating</p>{ratingAvg}</span>
 
 
-                            <span className='lg:xl:md:text-xl font-bold'><span className=' text-[#9F62F2]  lg:xl:md:text-5xl font-bold  '><MdReviews /></span><p className='text-gray-500'>Total Reviews</p>{reviews}</span>
+                            <span className='md:text-2xl xl:lg:text-4xl text-xl font-bold '><span className=' text-[#9F62F2]  lg:xl:text-5xl md:text-4xl font-bold  '><MdReviews /></span><p className='text-gray-500'>Total Reviews</p>{reviews}</span>
                         </div>
                         <button onClick={handleInstalled} className={`hover:cursor-pointer mb-6 text-xl font-bold p-4 rounded-lg transition-colors duration-300 ${isInstalled
                             ? 'bg-gray-400 text-white'
