@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { loadInstall, removeFromInstallation } from '../utils/LocalStorage';
+import { FaStar } from 'react-icons/fa';
+import { GrDownload } from 'react-icons/gr';
 
 const Installation = () => {
 
@@ -12,11 +14,11 @@ const Installation = () => {
     </p>
 
     const sortedApp = (() => {
-        if (sortOrder === 'price-desc') {
-            return [...installApp].sort((a, b) => b.size - a.size)
+        if (sortOrder === 'size-desc') {
+            return [...installApp].sort((a, b) => parseInt(b.size) - parseInt(a.size))
         }
-        else if (sortOrder === 'price-asc') {
-            return [...installApp].sort((a, b) => a.size - b.size)
+        else if (sortOrder === 'size-asc') {
+            return [...installApp].sort((a, b) => parseInt(a.size) - parseInt(b.size))
         }
         else {
             return installApp;
@@ -34,69 +36,72 @@ const Installation = () => {
     }
 
 
-    // const totalApps = {}
-    //     installApp.forEach(app => {
-    //         const category = app.category
+    const totalApps = {}
+        installApp.forEach(app => {
+            const category = app.category
 
 
-    //         totalApps[category] = (totalApps[category] || 0 + app.size)
-    //     })
-
+            totalApps[category] = (totalApps[category] || 0 + app.size)
+        })
 
 
 
     return (
         <div className=''>
-            <div  className=' p-10 m-30 '>
-            <div >
-                <div className='text-center'>
-                    <h1 className='text-4xl font-bold mb-4'>Your Installed Apps</h1>
-                    <p className='text-gray-500 text-lg'>Explore All Trending Apps on the Market developed by us</p>
+            <div className=' p-10 m-30 '>
+                <div >
+                    <div className='text-center'>
+                        <h1 className='text-4xl font-bold mb-4'>Your Installed Apps</h1>
+                        <p className='text-gray-500 text-lg'>Explore All Trending Apps on the Market developed by us</p>
+                    </div>
+                    <div className='flex justify-between py-5 items-center'>
+                        <h1 className=' text-lg font-semibold'>({sortedApp.length}) Apps Found</h1>
+
+                        <label className="form-control ">
+                            <select value={sortOrder}
+                                onChange={(e) => setSortOrder(e.target.value)}>
+                                <option value="none">Sort By Size</option>
+                                <option value="size-desc">High-&gt;Low</option>
+                                <option value="size-asc">Low-&gt;High</option>
+                            </select>
+                        </label>
+                    </div>
+
                 </div>
-                <div className='flex justify-between py-5 items-center'>
-                    <h1 className=' text-lg font-semibold'>({sortedApp.length}) Apps Found</h1>
-
-                    <lable className="form-control ">
-                        <select value={sortOrder}
-                            onChange={(e) => setSortOrder(e.target.value)}>
-                            <option value="none">Sort By Size</option>
-                            <option value="price-desc">High-&gt;Low</option>
-                            <option value="price-asc">Low-&gt;High</option>
-                        </select>
-                    </lable>
-                </div>
-
-            </div>
 
 
-            <div className='space-y-8'>
-                {
-                    sortedApp.map(a => (
-                        <div key={a.id} className='card card-side bg-base-100 shadow-lg'>
-                            <figure>
-                                <img
-                                    className='w-40 h-28 object-cover'
-                                    src={a.image}
-                                    alt={a.name}
-                                />
-                            </figure>
-                            <div className='card-body'>
-                                <h3 className='card-title'>{ }</h3>
-                                <p className='text-base-content/70'>{a.category}</p>
-                            </div>
-                            <div className='pr-4 flex items-center gap-3'>
-                                <button
-                                    onClick={() => handleUninstall(a.id)}
-                                    className='btn bg-green-500 text-white text-lg font-bold'
-                                >
-                                    Uninstall
-                                </button>
-                            </div>
+                <div className='space-y-8'>
+                    {
+                        sortedApp.map(a => (
+                            <div key={a.id} className='card card-side bg-base-100 shadow-lg p-3'>
+                                <figure>
+                                    <img
+                                        className='w-50 p-2 rounded-2xl object-cover'
+                                        src={a.image}
+                                        alt={a.title}
+                                    />
+                                </figure>
+                                <div className='card-body'>
+                                    <h3 className='card-title'>Name : {a.title}</h3>
+                                    <div className='flex gap-10 '>
+                            <span className='flex items-center text-lg font-bold text-green-500 gap-2'><GrDownload/>{a.downloads}</span>
+                            <span className='flex items-center text-lg font-bold text-[#FF8811]  gap-2'><FaStar/> {a.ratingAvg}</span>
+                            <span className='flex items-center text-lg font-bold'>{a.size}</span>
                         </div>
-                    ))
-                }
+                                </div>
+                                <div className='p-5 flex items-center gap-3'>
+                                    <button
+                                        onClick={() => handleUninstall(a.id)}
+                                        className='btn bg-[#00D390] text-white text-lg font-bold'
+                                    >
+                                        Uninstall
+                                    </button>
+                                </div>
+                            </div>
+                        ))
+                    }
+                </div>
             </div>
-        </div>
         </div>
     );
 };
