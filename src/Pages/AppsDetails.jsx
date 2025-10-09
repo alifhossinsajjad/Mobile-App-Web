@@ -1,14 +1,15 @@
 
-import { useParams } from 'react-router';
+import { Link, useParams } from 'react-router';
 import useApps from '../Hooks/useApps';
-import { updateApps } from '../utils/LocalStorage';
+import { loadInstall, updateApps } from '../utils/LocalStorage';
 import { TbDownload } from 'react-icons/tb';
 import { FaStar } from 'react-icons/fa';
 import { MdReviews } from 'react-icons/md';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
 import apps404image from '../assets/apps404.png'
+
 
 const AppsDetails = () => {
     const { id } = useParams();
@@ -17,29 +18,45 @@ const AppsDetails = () => {
 
     const [isInstalled, setIsInstalled] = useState(false);
 
-
-
-    if (loading) return <p className="text-center text-lg font-bold my-20">Loading App Details...</p>;
-
-    if (error) return <p className="text-center text-red-500 font-bold my-20">⚠️ Failed to load apps data.</p>;
-
-
     const app = apps.find(a => String(a.id) === id)
+
+
+    useEffect(() => {
+        const installedApp = loadInstall()
+        const alreadyInstalled = installedApp.some((a) => String(a.id) === String(id));
+        setIsInstalled(alreadyInstalled);
+    }, [id])
+
+
+
+    if (loading) return <div className="flex justify-center items-center py-20">
+        <div className="w-12 h-12 border-4 border-dashed rounded-full animate-spin border-[#9F62F2]"></div>
+    </div>
+
+    if (error) return (
+        <div className="text-center my-20 text-red-600">
+            <h2 className="text-2xl font-bold">Failed to load apps</h2>
+            <p>{error?.message || 'Something went wrong'}</p>
+        </div>
+    );
+
+
 
     if (!app) {
         return (
-            <div className=''>
-                <div className='flex  justify-center items-center'>
-                    <img src={apps404image} alt="" />
-                </div>
-                <div className='text-center my-10'>
-                    <h1 className='text-4xl font-bold mb-5'>App not Found</h1>
-                    <p className="text-gray-500">The app you’re looking for doesn’t exist or has been removed.</p>
-
-                    <LinK to={'/apps'} className="mt-6 bg-[#9F62F2] text-white px-6 py-3 rounded-lg hover:shadow-lg">Go Back Home</LinK>
+            <div className="min-h-[60vh] flex flex-col items-center justify-center my-30">
+                <img src={apps404image}/>
+                <h1 className="text-4xl font-bold mb-2">App Not Found</h1>
+                <p className="text-gray-500 text-center max-w-lg">
+                    The app you’re looking for doesn’t exist or has been removed.
+                </p>
+                <div className="mt-6">
+                    <Link to="/apps" className="bg-[#9F62F2] text-white px-6 py-3 rounded-lg hover:shadow-lg">
+                        Browse Apps
+                    </Link>
                 </div>
             </div>
-        )
+        );
     }
 
 
@@ -52,6 +69,8 @@ const AppsDetails = () => {
         setIsInstalled(true);
         toast.success('✅ App Installed Successfully!');
     }
+
+
     return (
         <div className='w-10/12 mx-auto'>
             <div className='xl:lg:md:flex  gap-10 my-20 border-b  border-gray-500 lg:xl:md:w-full pb-10'>
