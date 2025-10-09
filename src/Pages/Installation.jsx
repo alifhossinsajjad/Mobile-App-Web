@@ -71,7 +71,7 @@ const Installation = () => {
                             <div key={a.id} className='xl:lg:flex md:flex card-side bg-base-100 shadow-lg xl:lg:md:p-3'>
                                 <figure>
                                     <img
-                                        className='xl:lg:w-80 md:w-50   p-2 rounded-2xl object-cover'
+                                        className='xl:lg:w-30 md:w-20   p-2 rounded-2xl object-cover'
                                         src={a.image}
                                         alt={a.title}
                                     />
